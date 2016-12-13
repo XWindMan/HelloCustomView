@@ -28,6 +28,7 @@
         android:orientation="horizontal">
 
         <EditText
+            android:id="@+id/dia_ed_edit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="9"
@@ -35,6 +36,7 @@
             android:maxLength="10" />
 
         <ImageView
+            android:id="@+id/dia_ed_clear"
             android:layout_width="10dp"
             android:layout_height="10dp"
             android:layout_weight="1"
