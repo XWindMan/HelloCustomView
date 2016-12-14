@@ -12,7 +12,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 /**
- * Created by Vtrump on 2016/12/13.
+ * Created by WindMan on 2016/12/13.
  */
 
 public class EditDialog extends Dialog implements View.OnClickListener {
