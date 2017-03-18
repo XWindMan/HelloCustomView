@@ -1,4 +1,4 @@
-package com.windman.hellocustomview;
+package com.windman.hellocustomview.paintView;
 
 import android.content.Context;
 import android.graphics.Canvas;

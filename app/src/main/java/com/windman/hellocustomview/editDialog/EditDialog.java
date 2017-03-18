@@ -1,4 +1,4 @@
-package com.windman.hellocustomview;
+package com.windman.hellocustomview.editDialog;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -10,6 +10,8 @@ import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.windman.hellocustomview.R;
 
 /**
  * Created by WindMan on 2016/12/13.

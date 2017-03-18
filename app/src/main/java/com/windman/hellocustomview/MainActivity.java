@@ -1,5 +1,6 @@
 package com.windman.hellocustomview;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -10,6 +11,10 @@ import android.view.Gravity;
 import android.view.View;
 import android.view.Window;
 import android.widget.TextView;
+
+import com.windman.hellocustomview.ChangeAvatar.PicAlertDialog;
+import com.windman.hellocustomview.editDialog.EditDialog;
+import com.windman.hellocustomview.expandView.ExpandActivity;
 
 public class MainActivity extends AppCompatActivity {
     private PicAlertDialog mDialog;
@@ -33,13 +38,23 @@ public class MainActivity extends AppCompatActivity {
                     }
                 });
 
-                CardView cardView = (CardView) findViewById(R.id.showDialog);
-                cardView.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View view) {
-                        showPicDialog();
-                    }
-                });
+
+            }
+        });
+        //  PicAlertDialog
+        CardView cardView = (CardView) findViewById(R.id.showDialog);
+        cardView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                showPicDialog();
+            }
+        });
+        // expand
+        CardView expandView = (CardView) findViewById(R.id.showExpand);
+        expandView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, ExpandActivity.class));
             }
         });
     }

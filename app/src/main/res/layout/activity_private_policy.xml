@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zhy.android.percent.support.PercentLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:WindMan="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    tools:context="com.windman.hellocustomview.privatePolicyTextView.PrivatePolicyActivity">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        WindMan:layout_heightPercent="10%h"
+        WindMan:layout_widthPercent="80%w">
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <com.windman.hellocustomview.privatePolicyTextView.PrivatePolicyTextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            WindMan:color1="@color/Thistle"
+            WindMan:color2="@color/colorAccent"
+            WindMan:str1="我已阅读并同意"
+            WindMan:str2="隐私条款" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        WindMan:layout_heightPercent="10%h"
+        WindMan:layout_widthPercent="80%w">
+
+        <CheckBox
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <com.windman.hellocustomview.privatePolicyTextView.PrivatePolicyTextView
+            android:id="@+id/ppt"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            WindMan:color1="@color/Thistle"
+            WindMan:color2="@color/colorAccent"
+            WindMan:str1="根据字数调整字体大小，反正就这一行"
+            WindMan:str2="点击跳转" />
+    </LinearLayout>
+</com.zhy.android.percent.support.PercentLinearLayout>

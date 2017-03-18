@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#63A90A"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="10dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="你的水分够了"
+        android:textColor="#ffffff" />
+
+    <com.windman.hellocustomview.sectionProgressBar.SectionProgressBar
+        android:id="@+id/spb1"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        app:isEqualParts="true" />
+
+    <com.windman.hellocustomview.sectionProgressBar.SectionProgressBar
+        android:id="@+id/spb2"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        app:isEqualParts="false" />
+
+</LinearLayout>

@@ -1,10 +1,12 @@
-package com.windman.hellocustomview;
+package com.windman.hellocustomview.ChangeAvatar;
 
 import android.app.AlertDialog;
 import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+
+import com.windman.hellocustomview.R;
 
 /**
  * Created by WindMan on 2016/12/13.
