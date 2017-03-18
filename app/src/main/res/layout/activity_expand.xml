@@ -10,7 +10,8 @@
         android:layout_height="60dp"
         android:background="#63A90A"
         android:gravity="center"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:visibility="gone">
 
         <TextView
             android:id="@+id/textview_title"
@@ -29,19 +30,12 @@
             android:src="@mipmap/expand" />
     </LinearLayout>
 
-    <com.windman.hellocustomview.sectionProgressBar.SectionProgressBar
-        android:id="@+id/spb"
+    <ExpandableListView
+        android:id="@+id/expanded_listviewL"
         android:layout_width="match_parent"
-        android:background="@color/colorPrimary"
-        android:layout_height="wrap_content"
-        android:visibility="gone" />
-    <!--    <com.windman.hellocustomview.expandView.ExpandView
-            android:id="@+id/expandView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/layout_title"
-            android:layout_marginBottom="150dp"
-            android:background="#00FF00"
-            android:clickable="true"
-            android:visibility="invisible" />-->
+        android:layout_height="match_parent"
+        android:background="@null"
+        android:divider="@android:color/transparent"
+        android:paddingTop="10dp"
+        android:scrollbars="none" />
 </LinearLayout>
