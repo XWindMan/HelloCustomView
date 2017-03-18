@@ -16,6 +16,7 @@ import android.view.View;
  */
 
 public class MyShader extends View {
+
     public MyShader(Context context) {
         this(context, null);
     }
@@ -49,9 +50,9 @@ public class MyShader extends View {
         paint.setShader(shader);
         paint.setTextSize(200f);
         paint.setTypeface(Typeface.DEFAULT_BOLD);
-//        canvas.drawRect(0, 0, weight, height, paint);
+        canvas.drawRect(0, 0, weight, height, paint);
 //        canvas.drawCircle(weight / 2, height / 2, radius, paint);
-        canvas.drawText("美女",0, height / 2, paint);
+//        canvas.drawText("美女",0, height / 2, paint);
 
     }
 }
