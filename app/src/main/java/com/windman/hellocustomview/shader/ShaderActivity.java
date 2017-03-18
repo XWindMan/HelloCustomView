@@ -1,7 +1,9 @@
-package com.windman.hellocustomview;
+package com.windman.hellocustomview.shader;
 
 import android.app.Activity;
 import android.os.Bundle;
+
+import com.windman.hellocustomview.R;
 
 /**
  * Created by ${WindMan} on 2017/1/18.
