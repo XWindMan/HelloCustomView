@@ -7,5 +7,11 @@
 
     <com.windman.hellocustomview.shader.MyShader
         android:layout_width="match_parent"
-        android:layout_height="match_parent" />
+        android:layout_height="match_parent"
+        android:visibility="gone" />
+
+    <com.windman.hellocustomview.shader.SweepGradientView
+        android:id="@+id/sgv"
+        android:layout_width="300dp"
+        android:layout_height="300dp" />
 </LinearLayout>

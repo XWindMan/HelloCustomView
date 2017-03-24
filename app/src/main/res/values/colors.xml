@@ -4,4 +4,6 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="Thistle">#D8BFD8</color>
+    <color name="blue_slight">#B0C4DE</color>
+    <color name="blue_middle">#7B68EE</color>
 </resources>

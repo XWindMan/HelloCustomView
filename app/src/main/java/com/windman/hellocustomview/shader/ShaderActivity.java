@@ -10,9 +10,12 @@ import com.windman.hellocustomview.R;
  */
 
 public class ShaderActivity extends Activity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shader);
+        SweepGradientView sweepGradientView= (SweepGradientView) findViewById(R.id.sgv);
+        sweepGradientView.setDegrees(160);
     }
 }
