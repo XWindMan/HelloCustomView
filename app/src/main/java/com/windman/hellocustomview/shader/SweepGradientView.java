@@ -12,11 +12,7 @@ import android.view.View;
 public class SweepGradientView extends View {
 
     private Paint mPaint = null;
-
-
     private float degrees;
-
-    // 梯度渐变扫描渲染  
     private SweepGradient mSweepGradient = null;
 
     public SweepGradientView(Context context, AttributeSet attrs) {
