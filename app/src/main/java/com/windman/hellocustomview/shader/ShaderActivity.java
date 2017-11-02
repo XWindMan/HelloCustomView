@@ -1,5 +1,6 @@
 package com.windman.hellocustomview.shader;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.os.Bundle;
 import android.os.Handler;
@@ -17,6 +18,7 @@ public class ShaderActivity extends Activity {
     SweepGradientView sweepGradientView;
     private int degerees = 0;
 
+    @SuppressLint("HandlerLeak")
     Handler handler = new Handler() {
         @Override
         public void handleMessage(Message msg) {

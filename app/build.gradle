@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 24
-    buildToolsVersion '25.0.0'
+    buildToolsVersion '26.0.2'
     defaultConfig {
         applicationId "com.windman.hellocustomview"
         minSdkVersion 15
@@ -17,21 +17,20 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile fileTree(include: ['*.jar'], dir: 'libs')
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-
     compile 'com.android.support:appcompat-v7:24.2.1'
     compile 'com.android.support:cardview-v7:24.2.0'
     compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha9'
     testCompile 'junit:junit:4.12'
     // 百分比布局
     compile 'com.zhy:percent-support-extends:1.1.1'
-
     // fresco
     compile 'com.facebook.fresco:fresco:0.12.0'
     // 在 API < 14 上的机器支持 WebP 时，需要添加
@@ -43,5 +42,4 @@ dependencies {
     compile 'com.facebook.fresco:webpsupport:0.12.0'
     // 仅支持 WebP 静态图，需要添加
     compile 'com.facebook.fresco:webpsupport:0.12.0'
-
 }

@@ -1,0 +1,76 @@
+package com.windman.hellocustomview.RoateLayout;
+
+import android.graphics.Camera;
+import android.graphics.Matrix;
+import android.util.Log;
+import android.view.animation.Animation;
+import android.view.animation.LinearInterpolator;
+import android.view.animation.Transformation;
+
+public class Rotate3D extends Animation {
+    private static final String TAG = "Rotate3D";
+    // 开始角度
+    private final float mFromDegrees;
+    // 结束角度
+    private final float mToDegrees;
+    // X轴中心点
+    private final float mCenterX;
+    // Y轴中心点
+    private final float mCenterY;
+    // Z轴中心点
+    private final float mDepthZ;
+    //是否需要扭曲
+    private final boolean mReverse;
+    //摄像头
+    private Camera mCamera;
+
+    public Rotate3D(float fromDegrees, float toDegrees,
+                    float centerX, float centerY,
+                    float depthZ, boolean reverse) {
+        mFromDegrees = fromDegrees;
+        mToDegrees = toDegrees;
+        mCenterX = centerX;
+        mCenterY = centerY;
+        mDepthZ = depthZ;
+        mReverse = reverse;
+    }
+
+    @Override
+    public void initialize(int width, int height,
+                           int parentWidth,
+                           int parentHeight) {
+        super.initialize(width, height, parentWidth,
+                parentHeight);
+        mCamera = new Camera();
+        setDuration(300);//设置动画持续时间
+        setInterpolator(new LinearInterpolator());//设置动画变化速度
+    }
+
+    @Override
+    protected void applyTransformation(float
+                                               interpolatedTime, Transformation t) {
+        final float fromDegrees = mFromDegrees;
+        // 生成中间角度
+        float degrees = fromDegrees
+                + ((mToDegrees - fromDegrees)
+                * interpolatedTime);
+        final float centerX = mCenterX;
+        final float centerY = mCenterY;
+
+//        final Camera camera = mCamera;
+        final Matrix matrix = t.getMatrix();//取得当前矩阵
+        mCamera.save();
+        if (mReverse) {
+            mCamera.translate(0.0f, 0.0f, mDepthZ *
+                    interpolatedTime);
+        } else {
+            mCamera.translate(0.0f, 0.0f, mDepthZ * (1.0f -
+                    interpolatedTime));
+        }
+        mCamera.rotateY(degrees);//翻转
+        mCamera.getMatrix(matrix);// 取得变换后的矩阵
+        mCamera.restore();
+        matrix.preTranslate(-centerX, -centerY);
+        matrix.postTranslate(centerX, centerY);
+    }
+}
