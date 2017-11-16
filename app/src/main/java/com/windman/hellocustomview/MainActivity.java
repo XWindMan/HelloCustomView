@@ -13,8 +13,13 @@ import android.view.Window;
 import android.widget.TextView;
 
 import com.windman.hellocustomview.ChangeAvatar.PicAlertDialog;
+import com.windman.hellocustomview.RoateLayout.RotateActivity;
 import com.windman.hellocustomview.editDialog.EditDialog;
 import com.windman.hellocustomview.expandView.ExpandActivity;
+import com.windman.hellocustomview.moveListView.MoveListActivity;
+import com.windman.hellocustomview.paintView.PaintViewActivity;
+import com.windman.hellocustomview.privatePolicyTextView.PrivatePolicyActivity;
+import com.windman.hellocustomview.shader.ShaderActivity;
 
 public class MainActivity extends AppCompatActivity {
     private PicAlertDialog mDialog;
@@ -23,8 +28,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        final TextView textView = (TextView) findViewById(R.id.textview);
-        textView.setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.to_editdialog).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 EditDialog editDialog = new EditDialog(MainActivity.this);
@@ -33,26 +37,59 @@ public class MainActivity extends AppCompatActivity {
                     @Override
                     public void onOKClik(String text) {
                         if (!TextUtils.isEmpty(text)) {
-                            textView.setText(text);
+//                            textView.setText(text);
                         }
                     }
                 });
             }
         });
         //  PicAlertDialog
-        CardView cardView = (CardView) findViewById(R.id.showDialog);
-        cardView.setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.showDialog).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 showPicDialog();
             }
         });
         // expand
-        CardView expandView = (CardView) findViewById(R.id.showExpand);
-        expandView.setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.showExpand).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MainActivity.this, ExpandActivity.class));
+            }
+        });
+        // paintview
+        findViewById(R.id.to_paintview).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, PaintViewActivity.class));
+            }
+        });
+        // movelistview
+        findViewById(R.id.to_movelist).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, MoveListActivity.class));
+            }
+        });
+        // privatepolicy
+        findViewById(R.id.to_privatepolicy).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, PrivatePolicyActivity.class));
+            }
+        });
+        // rotatelayout
+        findViewById(R.id.to_roatelayout).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, RotateActivity.class));
+            }
+        });
+        // expand
+        findViewById(R.id.to_shader).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this, ShaderActivity.class));
             }
         });
     }

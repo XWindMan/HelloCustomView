@@ -5,68 +5,61 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context="com.windman.hellocustomview.MainActivity">
+    android:orientation="vertical">
 
-    <android.support.v7.widget.CardView
-        android:id="@+id/to_serviceActivity"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_margin="20dp"
-        android:clickable="true"
-        android:foreground="?android:attr/selectableItemBackground"
-        windman:cardBackgroundColor="@color/colorAccent"
-        windman:cardCornerRadius="10dp"
-        windman:cardElevation="10dp">
-
-        <TextView
-            android:id="@+id/textview"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:gravity="center"
-            android:text="弹出编辑框" />
-    </android.support.v7.widget.CardView>
-
-    <android.support.v7.widget.CardView
+    <Button
         android:id="@+id/showDialog"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_margin="20dp"
-        android:clickable="true"
-        android:foreground="?android:attr/selectableItemBackground"
-        windman:cardBackgroundColor="@color/colorAccent"
-        windman:cardCornerRadius="10dp"
-        windman:cardElevation="10dp">
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="弹出照片选择" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:gravity="center"
-            android:text="弹出照片选择" />
-    </android.support.v7.widget.CardView>
-
-    <android.support.v7.widget.CardView
+    <Button
         android:id="@+id/showExpand"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_margin="20dp"
-        android:clickable="true"
-        android:foreground="?android:attr/selectableItemBackground"
-        windman:cardBackgroundColor="@color/colorAccent"
-        windman:cardCornerRadius="10dp"
-        windman:cardElevation="10dp">
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="折叠列表" />
 
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:gravity="center"
-            android:text="ExpandView" />
-    </android.support.v7.widget.CardView>
+    <Button
+        android:id="@+id/to_movelist"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="横向移动" />
+
+    <Button
+        android:id="@+id/to_roatelayout"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="翻转布局" />
+
+    <Button
+        android:id="@+id/to_privatepolicy"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="隐私条款" />
+
+    <Button
+        android:id="@+id/to_paintview"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="手绘" />
+
+    <Button
+        android:id="@+id/to_editdialog"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="编辑弹框" />
+
+    <Button
+        android:id="@+id/to_shader"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="Shader" />
 </LinearLayout>

@@ -59,7 +59,6 @@ public class RotateActivity extends Activity {
             @Override
             public void onClick(View view) {
                 Toast.makeText(RotateActivity.this, "one", Toast.LENGTH_SHORT).show();
-                ;
             }
         });
 
@@ -78,10 +77,6 @@ public class RotateActivity extends Activity {
                     //第一阶段翻转
                     applyRotation(1, 0, 90);
                     index = 2;
-                } else {
-                    //第一阶段翻转
-//                    applyRotation(0, 0, -90);
-//                    index = 1;
                 }
             }
         });
@@ -89,11 +84,7 @@ public class RotateActivity extends Activity {
             @Override
             public void onClick(View view) {
                 Log.d(TAG, "onClick: index=" + index);
-                if (index == 1) {
-                    //第一阶段翻转
-//                    applyRotation(1, 0, 90);
-//                    index = 2;
-                } else {
+                if (index != 1) {
                     //第一阶段翻转
                     applyRotation(0, 0, -90);
                     index = 1;
@@ -117,14 +108,12 @@ public class RotateActivity extends Activity {
         //Y轴中心点
         final float centerY = flContainer.getHeight() / 2.0f;
         //Z轴中心点
-        final float depthZ = 500.0f;
+        final float depthZ = 300.0f;
         // 根据参数创建一个新的三维动画,并且监听触发下一个动画
         final Rotate3D rotation = new Rotate3D(start, end, centerX, centerY, depthZ, true);
 
         rotation.setAnimationListener(new DisplayNextView(tag));//设置第一阶段动画监听器
         flContainer.startAnimation(rotation);
-
-
     }
 
     /**
@@ -145,7 +134,7 @@ public class RotateActivity extends Activity {
             //执行第二阶段动画
             flContainer.post(new SwapViews(tag));
             //调整两个界面各自的visibility
-            adjustVisiable();
+//            adjustVisiable();
         }
 
         public void onAnimationRepeat(Animation animation) {
