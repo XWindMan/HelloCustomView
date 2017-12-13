@@ -62,4 +62,17 @@
         android:layout_height="50dp"
         android:gravity="center"
         android:text="Shader" />
+
+    <Button
+        android:id="@+id/to_location"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="获取城市" />
+    <Button
+        android:id="@+id/to_expand_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:text="折叠fragment" />
 </LinearLayout>

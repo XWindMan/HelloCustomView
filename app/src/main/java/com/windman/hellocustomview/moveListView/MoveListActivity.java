@@ -29,12 +29,12 @@ public class MoveListActivity extends Activity {
     private static final int move = 0x01;
     private static final int add = 0x02;
     private RecyclerView mRecyclerView;
-    private MyAdapter myAdapter=new MyAdapter();
+    private MyAdapter myAdapter = new MyAdapter();
     private List<Integer> mDataList = new ArrayList<>();
     private LinearLayoutManager manager;
-    private int dx = 4;
+    private int dx = 2;
     private boolean isMoving;
-    private int index=0;
+    private int index = 0;
     @SuppressLint("HandlerLeak")
     Handler mHandler = new Handler() {
         @Override
@@ -42,7 +42,7 @@ public class MoveListActivity extends Activity {
             super.handleMessage(msg);
             if (msg.what == move) {
                 if (mRecyclerView != null) {
-                    if (mRecyclerView!=null) {
+                    if (mRecyclerView != null) {
                         mRecyclerView.scrollBy(dx, 0);
                     }
                 }
@@ -51,18 +51,19 @@ public class MoveListActivity extends Activity {
                         || manager.findFirstVisibleItemPosition() <= 5) {
                     dx = -dx;
                 }*/
+                Log.d(TAG, "handleMessage:size= " + mDataList.size());
                 mHandler.sendEmptyMessageDelayed(move, 16);
             }
-            if (msg.what==add) {
+            if (msg.what == add) {
                 mDataList.add((int) (Math.random() * 100));
                 if (!isMoving) {
                     myAdapter.notifyDataSetChanged();
                 } else {
                     myAdapter.notifyItemChanged(index);
                 }
-                mHandler.sendEmptyMessageDelayed(add,16);
-                if (mDataList.size()>30&&!isMoving) {
-                    isMoving=true;
+                mHandler.sendEmptyMessageDelayed(add, 16);
+                if (mDataList.size() > 30 && !isMoving) {
+                    isMoving = true;
                     mHandler.sendEmptyMessage(move);
                 }
                 index++;

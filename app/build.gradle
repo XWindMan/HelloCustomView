@@ -18,9 +18,14 @@ android {
         }
     }
 
+    compileOptions {
+        targetCompatibility 1.8
+        sourceCompatibility 1.8
+    }
 }
 
 dependencies {
+    implementation 'com.android.support:support-v4:24.2.1'
     compile fileTree(include: ['*.jar'], dir: 'libs')
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
@@ -31,7 +36,7 @@ dependencies {
     compile 'com.android.support.constraint:constraint-layout:1.0.0-alpha9'
     testCompile 'junit:junit:4.12'
     // 百分比布局
-    compile 'com.zhy:percent-support-extends:1.1.1'
+//    compile 'com.zhy:percent-support-extends:1.1.1'
     // fresco
     compile 'com.facebook.fresco:fresco:0.12.0'
     // 在 API < 14 上的机器支持 WebP 时，需要添加
@@ -43,4 +48,73 @@ dependencies {
     compile 'com.facebook.fresco:webpsupport:0.12.0'
     // 仅支持 WebP 静态图，需要添加
     compile 'com.facebook.fresco:webpsupport:0.12.0'
+
+    // BUtterKnife
+    implementation 'com.jakewharton:butterknife:8.6.0'
+    annotationProcessor('com.jakewharton:butterknife-compiler:8.6.0')
+
+    // rxJava & rxAndroid 相关
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    implementation 'io.reactivex.rxjava2:rxjava:2.1.0'
+    implementation 'com.jakewharton.rxbinding2:rxbinding:2.0.0'
+    implementation 'com.trello.rxlifecycle2:rxlifecycle:2.1.0'
+    implementation 'com.trello.rxlifecycle2:rxlifecycle-components:2.1.0'
+    implementation 'com.tbruyelle.rxpermissions2:rxpermissions:0.9.4@aar'
+
+    // 网络请求
+    implementation 'com.squareup.retrofit2:retrofit:2.3.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.3.0'
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.3.0'
+    implementation 'com.squareup.okhttp3:okhttp:3.8.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:3.8.0'
+
+    // cookie
+//    implementation 'com.github.franmontiel:PersistentCookieJar:v1.0.1'
+
+    // gson
+    implementation 'com.google.code.gson:gson:2.8.1'
+
+    // 百分比布局
+    implementation 'com.zhy:percent-support-extends:1.1.1'
+
+    // 动画兼容库
+    implementation 'com.nineoldandroids:library:2.4.0+'
+
+    // 支持 GIF 动图，需要添加
+    implementation 'com.facebook.fresco:animated-gif:0.12.0'
+    implementation 'com.zhy:autolayout:1.4.5'
+
+    // fragments
+    implementation 'me.yokeyword:fragmentation:1.0.7'
+
+    // 换肤
+    implementation 'skin.support:skin-support:1.2.7'
+    implementation 'skin.support:skin-support-design:1.2.4'
+    implementation 'skin.support:skin-support-cardview:1.2.0'
+    implementation 'skin.support:skin-support-constraint-layout:1.0.2'
+
+    // HUD
+    implementation 'com.kaopiz:kprogresshud:1.1.0'
+
+    // xutils
+    implementation 'org.xutils:xutils:3.5.0'
+
+    // dagger
+    implementation 'com.google.dagger:dagger:2.11'
+    annotationProcessor 'com.google.dagger:dagger-compiler:2.11'
+
+    // spots-dialog --> https://github.com/d-max/spots-dialog
+    implementation 'com.github.d-max:spots-dialog:0.4@aar'
+
+    // apk编译分包
+//    implementation 'com.android.support:multidex:1.0.1'
+
+    // HUD ---->  https://github.com/Kaopiz/KProgressHUD
+    implementation 'com.kaopiz:kprogresshud:1.1.0'
+
+    // log ---->  https://github.com/orhanobut/logger
+    implementation 'com.orhanobut:logger:2.1.1'
+
+    // RxLocation
+    compile 'com.patloew.rxlocation:rxlocation:1.0.4'
 }

@@ -1,21 +1,22 @@
-package com.windman.hellocustomview;
+package com.windman.hellocustomview.base;
 
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.CardView;
 import android.text.TextUtils;
 import android.view.Gravity;
 import android.view.View;
 import android.view.Window;
-import android.widget.TextView;
 
 import com.windman.hellocustomview.ChangeAvatar.PicAlertDialog;
+import com.windman.hellocustomview.R;
 import com.windman.hellocustomview.RoateLayout.RotateActivity;
 import com.windman.hellocustomview.editDialog.EditDialog;
+import com.windman.hellocustomview.expandFragment.ExpandFragmentActivity;
 import com.windman.hellocustomview.expandView.ExpandActivity;
+import com.windman.hellocustomview.location.GetLocationActivity;
 import com.windman.hellocustomview.moveListView.MoveListActivity;
 import com.windman.hellocustomview.paintView.PaintViewActivity;
 import com.windman.hellocustomview.privatePolicyTextView.PrivatePolicyActivity;
@@ -90,6 +91,22 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(MainActivity.this, ShaderActivity.class));
+            }
+        });
+        // location
+        findViewById(R.id.to_location).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this,
+                        GetLocationActivity.class));
+            }
+        });
+        // expand fragment
+        findViewById(R.id.to_expand_fragment).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                startActivity(new Intent(MainActivity.this,
+                        ExpandFragmentActivity.class));
             }
         });
     }

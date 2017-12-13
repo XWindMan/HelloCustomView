@@ -8,21 +8,37 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <include
+        <fragment
             android:id="@+id/relative_layout_two"
-            layout="@layout/abroad_login_layout"
+            android:name="com.windman.hellocustomview.RoateLayout.AboroadLoginFragment"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:focusable="true"
             android:focusableInTouchMode="true" />
 
-        <include
+        <fragment
+            android:id="@+id/relative_layout_one"
+            android:name="com.windman.hellocustomview.RoateLayout.HomeLoginFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true" />
+        <!--        <include
+                    android:id="@+id/relative_layout_two"
+                    layout="@layout/abroad_login_layout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true" />-->
+
+        <!--<include
             android:id="@+id/relative_layout_one"
             layout="@layout/home_login_layout"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:focusable="true"
-            android:focusableInTouchMode="true" />
+            android:focusableInTouchMode="true" />-->
+
         <!--布局2 -->
         <!--<RelativeLayout
             android:id="@+id/relative_layout_two"
