@@ -6,6 +6,7 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
+import android.util.Log;
 import android.view.Gravity;
 import android.view.View;
 import android.view.Window;
@@ -13,6 +14,7 @@ import android.view.Window;
 import com.windman.hellocustomview.ChangeAvatar.PicAlertDialog;
 import com.windman.hellocustomview.R;
 import com.windman.hellocustomview.RoateLayout.RotateActivity;
+import com.windman.hellocustomview.circleView.CircleSeekBarActivity;
 import com.windman.hellocustomview.editDialog.EditDialog;
 import com.windman.hellocustomview.expandFragment.ExpandFragmentActivity;
 import com.windman.hellocustomview.expandView.ExpandActivity;
@@ -21,6 +23,7 @@ import com.windman.hellocustomview.moveListView.MoveListActivity;
 import com.windman.hellocustomview.paintView.PaintViewActivity;
 import com.windman.hellocustomview.privatePolicyTextView.PrivatePolicyActivity;
 import com.windman.hellocustomview.shader.ShaderActivity;
+import com.windman.hellocustomview.tabWave.TabWaveActivity;
 
 public class MainActivity extends AppCompatActivity {
     private PicAlertDialog mDialog;
@@ -109,6 +112,15 @@ public class MainActivity extends AppCompatActivity {
                         ExpandFragmentActivity.class));
             }
         });
+
+        findViewById(R.id.to_circleseekbar).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,
+                        TabWaveActivity.class));
+            }
+        });
+
     }
 
     private void showPicDialog() {

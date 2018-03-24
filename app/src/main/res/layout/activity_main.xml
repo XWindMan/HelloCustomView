@@ -7,72 +7,92 @@
     android:layout_height="match_parent"
     android:orientation="vertical">
 
-    <Button
-        android:id="@+id/showDialog"
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:gravity="center"
-        android:text="弹出照片选择" />
+        android:layout_height="match_parent">
 
-    <Button
-        android:id="@+id/showExpand"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:gravity="center"
-        android:text="折叠列表" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-    <Button
-        android:id="@+id/to_movelist"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:gravity="center"
-        android:text="横向移动" />
 
-    <Button
-        android:id="@+id/to_roatelayout"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:gravity="center"
-        android:text="翻转布局" />
+            <Button
+                android:id="@+id/showDialog"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="弹出照片选择" />
 
-    <Button
-        android:id="@+id/to_privatepolicy"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:gravity="center"
-        android:text="隐私条款" />
+            <Button
+                android:id="@+id/showExpand"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="折叠列表" />
 
-    <Button
-        android:id="@+id/to_paintview"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:gravity="center"
-        android:text="手绘" />
+            <Button
+                android:id="@+id/to_movelist"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="横向移动" />
 
-    <Button
-        android:id="@+id/to_editdialog"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:gravity="center"
-        android:text="编辑弹框" />
+            <Button
+                android:id="@+id/to_roatelayout"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="翻转布局" />
 
-    <Button
-        android:id="@+id/to_shader"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:gravity="center"
-        android:text="Shader" />
+            <Button
+                android:id="@+id/to_privatepolicy"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="隐私条款" />
 
-    <Button
-        android:id="@+id/to_location"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:gravity="center"
-        android:text="获取城市" />
-    <Button
-        android:id="@+id/to_expand_fragment"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:gravity="center"
-        android:text="折叠fragment" />
+            <Button
+                android:id="@+id/to_paintview"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="手绘" />
+
+            <Button
+                android:id="@+id/to_editdialog"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="编辑弹框" />
+
+            <Button
+                android:id="@+id/to_shader"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="Shader" />
+
+            <Button
+                android:id="@+id/to_location"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="获取城市" />
+
+            <Button
+                android:id="@+id/to_expand_fragment"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="折叠fragment" />
+
+            <Button
+                android:id="@+id/to_circleseekbar"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="To Circle Seekbar" />
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>
