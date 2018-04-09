@@ -14,6 +14,7 @@ import android.view.Window;
 import com.windman.hellocustomview.ChangeAvatar.PicAlertDialog;
 import com.windman.hellocustomview.R;
 import com.windman.hellocustomview.RoateLayout.RotateActivity;
+import com.windman.hellocustomview.blogs.ZhangHongYang.sticky_recyerview.StickyRecyclerViewActivity;
 import com.windman.hellocustomview.circleView.CircleSeekBarActivity;
 import com.windman.hellocustomview.editDialog.EditDialog;
 import com.windman.hellocustomview.expandFragment.ExpandFragmentActivity;
@@ -24,6 +25,8 @@ import com.windman.hellocustomview.paintView.PaintViewActivity;
 import com.windman.hellocustomview.privatePolicyTextView.PrivatePolicyActivity;
 import com.windman.hellocustomview.shader.ShaderActivity;
 import com.windman.hellocustomview.tabWave.TabWaveActivity;
+import com.windman.hellocustomview.test.main.TestCase;
+import com.windman.hellocustomview.utils.LoadingDailog;
 
 public class MainActivity extends AppCompatActivity {
     private PicAlertDialog mDialog;
@@ -51,7 +54,13 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.showDialog).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                showPicDialog();
+//                showPicDialog();
+                LoadingDailog.Builder loadBuilder=new LoadingDailog.Builder(MainActivity.this)
+                        .setMessage("加载中...")
+                        .setCancelable(true)
+                        .setCancelOutside(true);
+                LoadingDailog dialog=loadBuilder.create();
+                dialog.show();
             }
         });
         // expand
@@ -120,7 +129,13 @@ public class MainActivity extends AppCompatActivity {
                         TabWaveActivity.class));
             }
         });
-
+        findViewById(R.id.to_stickyview).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,
+                        StickyRecyclerViewActivity.class));
+            }
+        });
     }
 
     private void showPicDialog() {

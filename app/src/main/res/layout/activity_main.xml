@@ -16,9 +16,9 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-
             <Button
                 android:id="@+id/showDialog"
+                android:layout_margin="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:gravity="center"
@@ -27,11 +27,13 @@
             <Button
                 android:id="@+id/showExpand"
                 android:layout_width="match_parent"
+                android:layout_margin="10dp"
                 android:layout_height="50dp"
                 android:gravity="center"
                 android:text="折叠列表" />
 
             <Button
+                android:layout_margin="10dp"
                 android:id="@+id/to_movelist"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
@@ -40,6 +42,7 @@
 
             <Button
                 android:id="@+id/to_roatelayout"
+                android:layout_margin="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:gravity="center"
@@ -47,6 +50,7 @@
 
             <Button
                 android:id="@+id/to_privatepolicy"
+                android:layout_margin="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:gravity="center"
@@ -54,6 +58,7 @@
 
             <Button
                 android:id="@+id/to_paintview"
+                android:layout_margin="10dp"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:gravity="center"
@@ -63,6 +68,7 @@
                 android:id="@+id/to_editdialog"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
+                android:layout_margin="10dp"
                 android:gravity="center"
                 android:text="编辑弹框" />
 
@@ -70,12 +76,14 @@
                 android:id="@+id/to_shader"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
+                android:layout_margin="10dp"
                 android:gravity="center"
                 android:text="Shader" />
 
             <Button
                 android:id="@+id/to_location"
                 android:layout_width="match_parent"
+                android:layout_margin="10dp"
                 android:layout_height="50dp"
                 android:gravity="center"
                 android:text="获取城市" />
@@ -84,15 +92,24 @@
                 android:id="@+id/to_expand_fragment"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
+                android:layout_margin="10dp"
                 android:gravity="center"
                 android:text="折叠fragment" />
 
             <Button
                 android:id="@+id/to_circleseekbar"
                 android:layout_width="match_parent"
+                android:layout_margin="10dp"
                 android:layout_height="50dp"
                 android:gravity="center"
                 android:text="To Circle Seekbar" />
+            <Button
+                android:id="@+id/to_stickyview"
+                android:layout_margin="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:text="粘性recyblerview" />
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

@@ -6,4 +6,6 @@
     <color name="Thistle">#D8BFD8</color>
     <color name="blue_slight">#B0C4DE</color>
     <color name="blue_middle">#7B68EE</color>
+    <color name="half_white">#ccffffff</color>
+
 </resources>

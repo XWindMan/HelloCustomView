@@ -72,7 +72,8 @@
         <activity android:name=".location.GetLocationActivity" />
         <activity android:name=".expandFragment.ExpandFragmentActivity" />
         <activity android:name=".circleView.CircleSeekBarActivity" />
-        <activity android:name=".tabWave.TabWaveActivity"></activity>
+        <activity android:name=".tabWave.TabWaveActivity" />
+        <activity android:name=".blogs.ZhangHongYang.sticky_recyerview.StickyRecyclerViewActivity"></activity>
     </application>
 
 </manifest>
