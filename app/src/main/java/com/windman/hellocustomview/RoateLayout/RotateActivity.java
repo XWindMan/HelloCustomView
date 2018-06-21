@@ -49,7 +49,8 @@ public class RotateActivity extends Activity {
                 (FrameLayout) findViewById(R.id.frame_layout);
         relativeLayout1 = (RelativeLayout) findViewById(R.id.relative_layout_one);
         relativeLayout2 = (RelativeLayout) findViewById(R.id.relative_layout_two);
-
+        relativeLayout1.setCameraDistance(16000);
+        relativeLayout2.setCameraDistance(16000);
         btnRotateNext = (Button) findViewById(R.id.rotate_next);
         btnRotateBack = (Button) findViewById(R.id.rotate_back);
     }
@@ -108,7 +109,7 @@ public class RotateActivity extends Activity {
         //Y轴中心点
         final float centerY = flContainer.getHeight() / 2.0f;
         //Z轴中心点
-        final float depthZ = 300.0f;
+        final float depthZ = 100.0f;
         // 根据参数创建一个新的三维动画,并且监听触发下一个动画
         final Rotate3D rotation = new Rotate3D(start, end, centerX, centerY, depthZ, true);
 
@@ -174,7 +175,7 @@ public class RotateActivity extends Activity {
         //同样以中心点进行翻转
         float centerX = showView.getWidth() / 2.0f;
         float centerY = showView.getHeight() / 2.0f;
-        float centerZ = 500.0f;
+        float centerZ = 100.0f;
         if (centerX == 0 || centerY == 0) {
             //调用该方法getMeasuredWidth()，必须先执行measure()方法，否则会出异常。
             showView.measure(View.MeasureSpec.UNSPECIFIED, View.MeasureSpec.UNSPECIFIED);

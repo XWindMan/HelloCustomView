@@ -8,4 +8,15 @@
     <color name="blue_middle">#7B68EE</color>
     <color name="half_white">#ccffffff</color>
 
+
+    <color name="mms_voice_primary_start">#ef00ff</color>
+    <color name="mms_voice_primary_end">#0582f4</color>
+
+    <color name="mms_voice_secondary_start">#83018c</color>
+    <color name="mms_voice_secondary_end">#054cff</color>
+
+    <color name="mms_voice_fill_bottom">#320582f4</color>
+    <color name="mms_voice_fill_top">#0a0582f4</color>
+
+
 </resources>

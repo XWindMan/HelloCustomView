@@ -24,9 +24,8 @@ import com.windman.hellocustomview.moveListView.MoveListActivity;
 import com.windman.hellocustomview.paintView.PaintViewActivity;
 import com.windman.hellocustomview.privatePolicyTextView.PrivatePolicyActivity;
 import com.windman.hellocustomview.shader.ShaderActivity;
-import com.windman.hellocustomview.tabWave.TabWaveActivity;
-import com.windman.hellocustomview.test.main.TestCase;
 import com.windman.hellocustomview.utils.LoadingDailog;
+import com.windman.hellocustomview.wave.WaveActivity;
 
 public class MainActivity extends AppCompatActivity {
     private PicAlertDialog mDialog;
@@ -126,7 +125,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MainActivity.this,
-                        TabWaveActivity.class));
+                        WaveActivity.class));
             }
         });
         findViewById(R.id.to_stickyview).setOnClickListener(new View.OnClickListener() {

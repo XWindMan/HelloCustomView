@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context="com.windman.hellocustomview.wave.WaveActivity">
+
+    <com.windman.hellocustomview.wave.WaveView2
+        android:id="@+id/wave_view2"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="#000000"
+        android:visibility="gone" />
+
+    <SeekBar
+        android:id="@+id/seekbar"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_margin="30dp"
+        android:visibility="gone" />
+
+
+    <com.windman.hellocustomview.wave.WaveView
+        android:id="@+id/wave_view"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="#666666"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:id="@+id/conten"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#666666"
+        android:orientation="vertical">
+        <!--
+                <com.windman.hellocustomview.wave.StartView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />-->
+
+        <!--<com.windman.hellocustomview.wave.VoiceSinWaveView
+            android:layout_width="match_parent"
+            android:layout_height="200dp" />-->
+        <!-- <com.windman.hellocustomview.wave.HeartView
+             android:layout_width="match_parent"
+             android:layout_height="match_parent" />-->
+
+        <com.windman.hellocustomview.wave.AJMDView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
+</LinearLayout>
